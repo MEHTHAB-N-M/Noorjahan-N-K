@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noorjahan N K - Interior Design Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts - Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .skill-tag {
+            background: rgba(168, 162, 158, 0.1);
+            color: #a8a29e;
+            border: 1px solid rgba(168, 162, 158, 0.3);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0.25rem;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(168, 162, 158, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .group:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        section {
+            padding: 5rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Timeline styling */
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-container::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-stone-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <span class="font-bold text-xl tracking-tight text-stone-800">Noorjahan <span class="text-stone-400">N
+                        K</span></span>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about"
+                        class="text-sm font-semibold text-stone-600 hover:text-stone-400 transition">About</a>
+                    <a href="#skills"
+                        class="text-sm font-semibold text-stone-600 hover:text-stone-400 transition">Skills</a>
+                    <a href="#portfolio"
+                        class="text-sm font-semibold text-stone-600 hover:text-stone-400 transition">Renderings</a>
+                    <a href="#contact"
+                        class="text-sm font-semibold text-stone-600 hover:text-stone-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-900">
+        <div class="absolute inset-0 opacity-30 pointer-events-none"
+            style="background-image: url('WhatsApp%20Image%202026-05-05%20at%2012.20.00%20AM.jpeg'); background-size: cover; background-position: center; filter: blur(10px);">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-stone-400/20 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <div
+                class="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-stone-400 mb-8 shadow-[0_0_30px_rgba(14,165,233,0.5)] transform hover:scale-105 transition duration-500">
+                <img src="WhatsApp%20Image%202026-05-05%20at%2012.20.00%20AM.jpeg" alt="Profile"
+                    class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">Noorjahan <span
+                    class="text-stone-400">N K</span></h1>
+            <p class="text-stone-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-8">Interior Design
+                Student</p>
+            <p class="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto italic mb-10 leading-relaxed">
+                "Passionate Interior Design Student dedicated to mastering the art of spatial transformation. Driven by
+                a keen eye for aesthetics and functional design, actively developing expertise in conceptualization and
+                advanced visualization techniques to create inspiring environments."
+            </p>
+            <a href="#contact"
+                class="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-stone-400 rounded-full hover:bg-stone-400 transition-all shadow-lg shadow-stone-400/30 gap-2">
+                Let's Work Together <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Education & Skills Section -->
+    <section id="about" class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <!-- Education -->
+        <div>
+            <h2 class="section-title justify-start"><i class="fas fa-graduation-cap text-stone-400"></i> Education</h2>
+            <div class="space-y-8 timeline-container mt-8">
+
+                <div
+                    class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-stone-50 bg-stone-400 text-white shadow-md z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -ml-5 md:ml-0 top-4 md:top-auto">
+                        <i class="fas fa-university text-sm"></i>
+                    </div>
+                    <div
+                        class="ml-12 md:ml-0 w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-stone-800 text-lg">Abate Group of Institutions</h4>
+                        <p class="text-stone-500 font-semibold text-sm mb-2">Perinthalmanna &bull; 2024 - 2027</p>
+                        <p class="text-stone-500 text-sm leading-relaxed">Interior Design Studies.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-stone-50 bg-stone-200 text-stone-500 shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -ml-5 md:ml-0 top-4 md:top-auto">
+                        <i class="fas fa-school text-sm"></i>
+                    </div>
+                    <div
+                        class="ml-12 md:ml-0 w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-stone-800 text-lg">GHSS Munnurcode</h4>
+                        <p class="text-stone-500 text-sm">Higher Secondary Education</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-stone-50 bg-stone-200 text-stone-500 shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -ml-5 md:ml-0 top-4 md:top-auto">
+                        <i class="fas fa-school text-sm"></i>
+                    </div>
+                    <div
+                        class="ml-12 md:ml-0 w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-stone-800 text-lg">GHSS Kadambur</h4>
+                        <p class="text-stone-500 text-sm">High School Education</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-stone-50 bg-stone-200 text-stone-500 shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -ml-5 md:ml-0 top-4 md:top-auto">
+                        <i class="fas fa-school text-sm"></i>
+                    </div>
+                    <div
+                        class="ml-12 md:ml-0 w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-stone-800 text-lg">VKMUP School Vengassery</h4>
+                        <p class="text-stone-500 text-sm">Primary Education</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Skills & Languages -->
+        <div id="skills">
+            <h2 class="section-title justify-start"><i class="fas fa-laptop-code text-stone-400"></i> Expertise</h2>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm mb-8">
+                <h3 class="font-bold text-stone-700 mb-5 text-sm uppercase tracking-wider flex items-center gap-2"><i
+                        class="fas fa-desktop text-stone-400"></i> Software</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag">AutoCAD</span>
+                    <span class="skill-tag">3ds Max</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">SketchUp</span>
+                    <span class="skill-tag">Enscape</span>
+                    <span class="skill-tag">Joy Plan</span>
+                    <span class="skill-tag">Coohom</span>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm">
+                    <h3 class="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">Core Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-stone-600 font-medium"><i
+                                class="fas fa-check-circle text-stone-400"></i> Communication</li>
+                        <li class="flex items-center gap-3 text-stone-600 font-medium"><i
+                                class="fas fa-check-circle text-stone-400"></i> Time Management</li>
+
+                        <li class="flex items-center gap-3 text-stone-600 font-medium"><i
+                                class="fas fa-check-circle text-stone-400"></i> Conceptualization</li>
+                        <li class="flex items-center gap-3 text-stone-600 font-medium"><i
+                                class="fas fa-check-circle text-stone-400"></i> Visualization</li>
+                        <li class="flex items-center gap-3 text-stone-600 font-medium"><i
+                                class="fas fa-check-circle text-stone-400"></i> Drawing</li>
+
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm">
+                    <h3 class="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="bg-stone-100 text-stone-700 px-3 py-1.5 rounded-lg text-sm font-semibold">English</span>
+                        <span
+                            class="bg-stone-100 text-stone-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Malayalam</span>
+                        <span
+                            class="bg-stone-100 text-stone-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Tamil</span>
+                        <span
+                            class="bg-stone-100 text-stone-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Hindi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">Workshops</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-white p-5 rounded-2xl border-l-4 border-purple-500 shadow-sm transition-all hover:shadow-md">
+                            <h4 class="font-bold text-stone-800 text-base">Thermocoal Model Making</h4>
+                            <p class="text-xs text-purple-600 font-medium mt-1">Abate Group of Institutions</p>
+                        </div>
+                        <div
+                            class="bg-white p-5 rounded-2xl border-l-4 border-stone-400 shadow-sm transition-all hover:shadow-md">
+                            <h4 class="font-bold text-stone-800 text-base">Clay Model Making</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">Interests</h3>
+                    <div class="grid grid-cols-2 gap-3 text-center">
+                        <div
+                            class="bg-white p-4 rounded-2xl shadow-sm text-stone-500 hover:text-stone-400 hover:shadow-md transition-all">
+                            <i class="fas fa-camera-retro text-2xl mb-2 block"></i><span
+                                class="text-xs font-bold">Photography</span>
+                        </div>
+                        <div
+                            class="bg-white p-4 rounded-2xl shadow-sm text-stone-500 hover:text-stone-400 hover:shadow-md transition-all">
+                            <i class="fas fa-paint-brush text-2xl mb-2 block"></i><span
+                                class="text-xs font-bold">Painting</span>
+                        </div>
+                        <div
+                            class="bg-white p-4 rounded-2xl shadow-sm text-stone-500 hover:text-stone-400 hover:shadow-md transition-all">
+                            <i class="fas fa-plane-departure text-2xl mb-2 block"></i><span
+                                class="text-xs font-bold">Travelling</span>
+                        </div>
+                        <div
+                            class="bg-white p-4 rounded-2xl shadow-sm text-stone-500 hover:text-stone-400 hover:shadow-md transition-all">
+                            <i class="fas fa-book text-2xl mb-2 block"></i><span
+                                class="text-xs font-bold">Reading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visuals Section -->
+    <section id="portfolio" class="bg-white border-y border-stone-200">
+        <h2 class="section-title"><i class="fas fa-eye text-stone-400"></i> Visuals & Renderings</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm h-80">
+                <img src="Enscape_2026-02-21-13-04-03.jpg.jpeg" class="portfolio-img absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Room 1</h4>
+                </div>
+            </div>
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm h-80">
+                <img src="FOR%20CHM-Bedroom-20260404-134218.jpg.jpeg" class="portfolio-img absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Wardrobe</h4>
+                </div>
+            </div>
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm h-72">
+                <img src="ASHQ%20JWLRY-Model-Customized-20260407-145346.jpg.jpeg"
+                    class="portfolio-img absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Retail Store</h4>
+                </div>
+            </div>
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm h-72">
+                <img src="Rectangle%20Room%202-Unnamed-20260419-143927.jpg.jpeg" class="portfolio-img absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Room 2</h4>
+                </div>
+            </div>
+
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm h-72">
+                <img src="FOR%20CHM-Unnamed-20260404-151219.jpg.jpeg" class="portfolio-img absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Kitchen</h4>
+                </div>
+            </div> <br>
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm">
+                <img src="WhatsApp%20Image%202026-05-06%20at%209.58.45%20PM.jpeg"
+                    class="w-full h-auto block transition-transform duration-500 group-hover:scale-105">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Auditorium Mood Board</h4>
+                </div>
+            </div>
+
+
+
+            <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm">
+                <img src="WhatsApp%20Image%202026-05-06%20at%209.57.40%20PM.jpeg"
+                    class="w-full h-auto block transition-transform duration-500 group-hover:scale-105">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <div
+                    class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="font-bold text-white text-xl">Cafe Mood Board</h4>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- My works section -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-camera text-stone-400"></i> My Works</h2>
+        <div class="relative bg-stone-100 rounded-3xl overflow-hidden group shadow-sm mb-6">
+            <img src="CAMOTALE2.jpg.jpeg"
+                class="w-full h-auto block transition-transform duration-500 group-hover:scale-105">
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+                class="absolute bottom-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="bg-stone-400/90 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-stone-400 backdrop-blur-sm">Executed
+                        Project</span>
+                </div>
+                <h4 class="font-bold text-white text-xl">Camotale</h4>
+                <p class="text-stone-200 text-sm mt-1 leading-snug">Front Office - 3rd View.<br>A real interior project
+                    successfully executed and completed by me.</p>
+            </div>
+        </div>
+        <a href="REAL%20WORK.pdf" target="_blank"
+            class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+            <i
+                class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+            <span class="font-bold text-stone-800 block text-lg">Real Work</span>
+        </a>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="bg-white border-t border-stone-200">
+        <h2 class="section-title"><i class="fas fa-file-pdf text-stone-500"></i> Project Portfolios</h2>
+        <p class="text-center text-stone-500 mb-10 max-w-2xl mx-auto">Browse through detailed PDF documentation of
+            various interior design projects, showcasing layouts, concepts, and technical drawings.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="BEDROOM%201.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Bedroom 1</span>
+            </a>
+            <a href="Bedroom%202.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Bedroom 2</span>
+            </a>
+            <a href="kitchen%201.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Kitchen 1</span>
+            </a>
+            <a href="KITCHEN%202.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Kitchen 2</span>
+            </a>
+            <a href="CAFE.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Cafe</span>
+            </a>
+            <a href="CAFE%20SECTN%20PORTFLIO.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Cafe Section</span>
+            </a>
+            <a href="AUDITORIUM.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Auditorium</span>
+            </a>
+            <a href="AUDITORIUM%20SECTION.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">Auditorium Section</span>
+            </a>
+            <a href="HOUSE%20LAYOUT.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">House Layout</span>
+            </a>
+            <a href="HOUSE%20SECTION.pdf" target="_blank"
+                class="block bg-stone-50 p-8 rounded-3xl border border-stone-200 hover:border-stone-400 hover:shadow-xl transition-all text-center group transform hover:-translate-y-1">
+                <i
+                    class="fas fa-file-pdf text-4xl text-stone-400 mb-4 block group-hover:text-stone-500 transition-colors"></i>
+                <span class="font-bold text-stone-800 block text-lg">House Section</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-stone-900 text-white py-24 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-stone-400/10 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <i class="fas fa-paper-plane text-5xl text-stone-400 mb-8 block animate-bounce"></i>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Let's Connect</h2>
+            <p class="text-stone-400 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">Have a project in mind
+                or looking to collaborate? Reach out to me directly and let's create something beautiful.</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                <a href="tel:7907981291"
+                    class="flex items-center justify-center gap-4 bg-stone-800 hover:bg-stone-700 border border-stone-700 px-8 py-4 rounded-2xl text-white transition-all text-lg shadow-lg">
+                    <i class="fas fa-phone-alt text-stone-400"></i>
+                    <span class="font-bold tracking-wide">7907981291</span>
+                </a>
+                <a href="mailto:noorjahannk295@gmail.com"
+                    class="flex items-center justify-center gap-4 bg-stone-400 hover:bg-stone-400 px-8 py-4 rounded-2xl text-white transition-all shadow-lg shadow-stone-400/25 text-lg">
+                    <i class="fas fa-envelope"></i>
+                    <span class="font-bold tracking-wide">noorjahannk295@gmail.com</span>
+                </a>
+            </div>
+
+            <div
+                class="pt-8 border-t border-stone-800 text-stone-500 text-sm font-medium uppercase tracking-widest flex justify-center items-center gap-4">
+                &copy; 2026 Noorjahan N K
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
